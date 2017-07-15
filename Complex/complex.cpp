@@ -47,9 +47,9 @@ Complex Complex::operator~() const
 std::istream & operator>>(std::istream & is, Complex & c)
 {
     std::cout << "Real: ";
-    std::cin >> c.real;
+    is >> c.real;
     std::cout << "Imaginary: ";
-    std::cin >> c.imag;
+    is >> c.imag;
     
     return is;
 }
