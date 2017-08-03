@@ -23,7 +23,7 @@ while c < len(op):
     v.append(filter(None, op[c]))       
     c = c+1
 
-i, n, wcount, lcount = 0, 0, 0, 0
+i, n, lcount = 0, 0, 0
 unic = {}
 while i < len(v):
     for ch in v[i]:
