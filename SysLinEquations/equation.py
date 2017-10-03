@@ -180,8 +180,8 @@ def householder(a, b):
     discrep = np.dot(a, x)
     discrep = discrep - b
 
-    print("Method of Householder:")
+    print("Method of Householder:\n")
     print("Vector discrep: ", discrep)
-    print("Vector x: ", x)
+    print("Vector x: ", x, "\n")
 
     return x
