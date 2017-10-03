@@ -174,7 +174,9 @@ def householder(a, b):
         x[i] = int((x[i] * 10000) + 0.5) / 10000
         i += 1
 
-    # Вектор невязки
+    """
+    Vector of discrepancy (Ax - B)
+    """
     discrep = np.dot(a, x)
     discrep = discrep - b
 
