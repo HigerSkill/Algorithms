@@ -8,9 +8,6 @@
 from math import *
 
 import pprint
-import matplotlib.pyplot as plt
-import sklearn.metrics as sk
-
 
 def analytic_f(t, r=-0.034, Ts=25.1, T0=75.6):
     return round(Ts - (Ts - T0) * exp(r * t), 4)
