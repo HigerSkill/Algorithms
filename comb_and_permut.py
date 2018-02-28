@@ -10,10 +10,7 @@ def comb(n, k):
     p = k
     while p >= 0:
         A.append(B.copy())
-        if B[k-1] == n:
-            p = p - 1
-        else:
-            p = k - 1
+        p = p-1 if B[k-1] == n else k-1
         if p >= 0:
             for i in range(k-1, p-1, -1):
                 B[i] = B[p] + i - p + 1
