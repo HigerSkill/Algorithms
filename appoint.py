@@ -33,7 +33,7 @@ def appoint(c, v, a):
         variant.append(S(found[i], c, v))
 
     if not variant:
-        return "Допустимых решений нет"
+        return []
 
     varmin = min(variant)
     for i in range(len(variant)):
