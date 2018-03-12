@@ -20,10 +20,10 @@ def appoint(c, v, a):
     variant = []
 
     p = []
-    for i in range(len(perm)):
+    for i in range(len(perm)): # Находим все возможные перестановки
         p.append([[j for j in range(1, n + 1)], perm[i]])
 
-    for i in range(len(perm)):
+    for i in range(len(perm)): # Ищем допустмые решения
         ok = 0
         for j in range(n):
             search = p[i]
@@ -33,10 +33,10 @@ def appoint(c, v, a):
         if ok == n:
             found.append(p[i])
 
-    for i in range(len(found)):
+    for i in range(len(found)): # Вычисляем суммы затрат перевозки
         variant.append(S(found[i], c, v))
 
-    ind = variant.index(min(variant))
+    ind = variant.index(min(variant)) # Находим оптимальное решение
 
     return found[ind]
 
