@@ -76,13 +76,9 @@ def floyd(w, s, t):
         k = k + 1
         stop = 0
         cont = 0
-        contour = False
         for i in range(n):
             if d[i][i] < 0:
-                contour = True
                 return None
-            if d[i][i] > 0:
-                contour = True
             if d[i][i] >= 0 and k == n:
                 stop += 1
             if d[i][i] >= 0 and k < n:
@@ -94,7 +90,7 @@ def floyd(w, s, t):
             while q != s:
                 q = h[s][q]
                 short_way.append(q)
-            return d, h, short_way, contour
+            return d, h, short_way
         if cont == n:
             continue
 
@@ -157,10 +153,8 @@ if __name__ == '__main__':
            [inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, 0]]
 
     n = len(W3)
-    d, h, way, cont = floyd(W4, 0, 0)
-
-    print(d, cont)
-
+    d, h, way = floyd(W4, 0, 0)
+    
     K = 20
     for i in range(n):
         m = 0
